@@ -18,8 +18,14 @@
 
 int main(int argc, char const *argv[])
 {
+    // uname struct declaration
+    struct utsname uts;
+    uname(&uts);
 
+    // ASCII art print
 
+    // info printing
+    printf(RED"\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n\n" RESET);
     return 0;
 }
 
