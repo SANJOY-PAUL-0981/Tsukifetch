@@ -43,7 +43,6 @@ int main(int argc, char const *argv[])
 
     printf(RED"\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
     printf(BOLD_RED "> tsukishima - built by tsukixp\n" RESET);
-    fopen("/etc/lsb-release", "r");
     return 0;
 }
 
