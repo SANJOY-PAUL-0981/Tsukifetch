@@ -17,6 +17,8 @@
 #define BOLD_RED "\e[1;31m"
 #define BOLD_PURPLE "\e[1;35m"
 
+// ASCII art print func
+
 int main(int argc, char const *argv[])
 {
     // uname struct declaration
@@ -34,13 +36,14 @@ int main(int argc, char const *argv[])
     printf(BOLD_PURPLE"\n 🌐 HOST: " WHITE "%s\n" RESET, uts.nodename);
     printf(BOLD_PURPLE" 📟 SHELL: " WHITE "%s\n" RESET, shellName);
     printf(BOLD_PURPLE" 💾 KERNEL: " WHITE "%s\n" RESET, uts.release);
-    printf(BOLD_PURPLE" 🗄️  PU: \n");
+    printf(BOLD_PURPLE" 🗄️  CPU: \n");
     // Desktop Env getenv() lib func
     char *desktop_Enviorment = getenv("XDG_CURRENT_DESKTOP");
     printf(BOLD_PURPLE" 🏙️  DE/WM: " WHITE "%s\n" RESET, desktop_Enviorment);
 
     printf(RED"\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
     printf(BOLD_RED "> tsukishima - built by tsukixp\n" RESET);
+    fopen("/etc/lsb-release", "r");
     return 0;
 }
 
