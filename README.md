@@ -27,5 +27,5 @@ It is build in C language. I hope you guys will like it. If you faced any kind o
 To run this paste this in your terminal.
 ```bash
   tsukifetch
-``
+```
   
