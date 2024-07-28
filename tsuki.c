@@ -81,6 +81,27 @@ char printASCII_Logo(const char *distro_name)
         printf("  / ___ |   / /     / /__   / / / /\n");
         printf(" /_/  |_|  /_/      \\___/  /_/ /_/ \n");
     }
+
+    else if (strncmp(distro_name, "linuxmint", 3) == 0)
+    {
+        // linux mint ASCII art
+        printf("    __   _                                  __  ___   _             __ \n");
+        printf("   / /  (_)  ____     __  __   _  __       /  |/  /  (_)  ____     / /_\n");
+        printf("  / /  / /  / __ \\   / / / /  | |/_/      / /|_/ /  / /  / __ \\   / __/\n");
+        printf(" / /  / /  / / / /  / /_/ /  _>  <       / /  / /  / /  / / / /  / /_  \n");
+        printf("/_/  /_/  /_/ /_/   \\__,_/  /_/|_|      /_/  /_/  /_/  /_/ /_/   \\__/  \n");
+        printf("                                                                        \n");
+    }
+
+    else
+    {
+        // none of this matched then tsukifetch printed
+        printf("   __                      __      _            __       _                      \n");
+        printf("  / /_   _____   __  __   / /__   (_)  _____   / /_     (_)  ____ ___     ____ _\n");
+        printf(" / __/  / ___/  / / / /  / //_/  / /  / ___/  / __ \\   / /  / __ `__ \\   / __ `/\n");
+        printf(" / /_   (__  )  / /_/ /  / ,<    / /  (__  )  / / / /  / /  / / / / / /  / /_/ / \n");
+        printf("\\__/  /____/   \\__,_/  /_/|_|  /_/  /____/  /_/ /_/  /_/  /_/ /_/ /_/   \\__,_/  \n");
+    }
 }
 
 // Read distro name
