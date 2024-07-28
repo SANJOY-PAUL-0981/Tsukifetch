@@ -6,6 +6,7 @@
 
 // ANSI colour codes
 #define RED "\e[0;31m"
+#define LIGHT_RED "\033[1;31m"
 #define CYAN "\033[1;36m"
 #define BLUE "\033[1;34m"
 #define YELLOW "\033[1;33m"
@@ -24,11 +25,11 @@ char printASCII_Logo(const char *distro_name)
     if (strncmp(distro_name, "ubuntu", 3) == 0)
     {
         // ubuntu ASCII art
-        printf("   __  __   __                         __          \n");
-        printf("  / / / /  / /_     __  __   ____     / /_   __  __\n");
-        printf(" / / / /  / __ \\   / / / /  / __ \\   / __/  / / / /\n");
-        printf("/ /_/ /  / /_/ /  / /_/ /  / / / /  / /_   / /_/ / \n");
-        printf("\\____/  /_.___/   \\__,_/  /_/ /_/   \\__/   \\__,_/  \n");
+        printf(LIGHT_RED "   __  __   __                         __          \n");
+        printf(LIGHT_RED "  / / / /  / /_     __  __   ____     / /_   __  __\n");
+        printf(LIGHT_RED " / / / /  / __ \\   / / / /  / __ \\   / __/  / / / /\n");
+        printf(LIGHT_RED "/ /_/ /  / /_/ /  / /_/ /  / / / /  / /_   / /_/ / \n");
+        printf(LIGHT_RED "\\____/  /_.___/   \\__,_/  /_/ /_/   \\__/   \\__,_/  \n");
     }
 
     else if (strncmp(distro_name, "pop", 3) == 0)
@@ -45,62 +46,62 @@ char printASCII_Logo(const char *distro_name)
     else if (strncmp(distro_name, "kubuntu", 3) == 0)
     {
         // kubuntu ASCII art
-        printf("    __               __                         __          \n");
-        printf("   / /__   __  __   / /_     __  __   ____     / /_   __  __\n");
-        printf("  / //_/  / / / /  / __ \\   / / / /  / __ \\   / __/  / / / /\n");
-        printf(" / ,<    / /_/ /  / /_/ /  / /_/ /  / / / /  / /_   / /_/ / \n");
-        printf("/_/|_|   \\__,_/  /_.___/   \\__,_/  /_/ /_/   \\__/   \\__,_/  \n");
+        printf(BLUE "    __               __                         __          \n");
+        printf(BLUE "   / /__   __  __   / /_     __  __   ____     / /_   __  __\n");
+        printf(BLUE "  / //_/  / / / /  / __ \\   / / / /  / __ \\   / __/  / / / /\n");
+        printf(BLUE " / ,<    / /_/ /  / /_/ /  / /_/ /  / / / /  / /_   / /_/ / \n");
+        printf(BLUE "/_/|_|   \\__,_/  /_.___/   \\__,_/  /_/ /_/   \\__/   \\__,_/  \n");
     }
 
     else if (strncmp(distro_name, "fedora", 3) == 0)
     {
         // fedora ASCII art
-        printf("    ____               __                         \n");
-        printf("   / __/  ___     ____/ /  ____     _____   ____ _\n");
-        printf("  / /_   / _ \\   / __  /  / __ \\   / ___/  / __ `/\n");
-        printf(" / __/  /  __/  / /_/ /  / /_/ /  / /     / /_/ / \n");
-        printf("/_/     \\___/   \\__,_/   \\____/  /_/      \\__,_/  \n");
+        printf(PURPLE "    ____               __                         \n");
+        printf(PURPLE "   / __/  ___     ____/ /  ____     _____   ____ _\n");
+        printf(PURPLE "  / /_   / _ \\   / __  /  / __ \\   / ___/  / __ `/\n");
+        printf(PURPLE " / __/  /  __/  / /_/ /  / /_/ /  / /     / /_/ / \n");
+        printf(PURPLE "/_/     \\___/   \\__,_/   \\____/  /_/      \\__,_/  \n");
     }
 
     else if (strncmp(distro_name, "debian", 3) == 0)
     {
         // debian ASCII art
-        printf("       __           __       _                 \n");
-        printf("  ____/ /  ___     / /_     (_)  ____ _   ____ \n");
-        printf(" / __  /  / _ \\   / __ \\   / /  / __ `/  / __ \\\n");
-        printf("/ /_/ /  /  __/  / /_/ /  / /  / /_/ /  / / / /\n");
-        printf("\\__,_/   \\___/  /_.___/  /_/   \\__,_/  /_/ /_/ \n");
+        printf(RED "       __           __       _                 \n");
+        printf(RED "  ____/ /  ___     / /_     (_)  ____ _   ____ \n");
+        printf(RED " / __  /  / _ \\   / __ \\   / /  / __ `/  / __ \\\n");
+        printf(RED "/ /_/ /  /  __/  / /_/ /  / /  / /_/ /  / / / /\n");
+        printf(RED "\\__,_/   \\___/  /_.___/  /_/   \\__,_/  /_/ /_/ \n");
     }
 
     else if (strncmp(distro_name, "arch", 3) == 0)
     {
         // arch ASCII art
-        printf("     ___                       __ \n");
-        printf("    /   |     _____   _____   / /_\n");
-        printf("   / /| |    / ___/  / ___/  / __ \\\n");
-        printf("  / ___ |   / /     / /__   / / / /\n");
-        printf(" /_/  |_|  /_/      \\___/  /_/ /_/ \n");
+        printf(PURPLE "     ___                       __ \n");
+        printf(PURPLE "    /   |     _____   _____   / /_\n");
+        printf(PURPLE "   / /| |    / ___/  / ___/  / __ \\\n");
+        printf(PURPLE "  / ___ |   / /     / /__   / / / /\n");
+        printf(PURPLE " /_/  |_|  /_/      \\___/  /_/ /_/ \n");
     }
 
     else if (strncmp(distro_name, "linuxmint", 3) == 0)
     {
         // linux mint ASCII art
-        printf("    __   _                                  __  ___   _             __ \n");
-        printf("   / /  (_)  ____     __  __   _  __       /  |/  /  (_)  ____     / /_\n");
-        printf("  / /  / /  / __ \\   / / / /  | |/_/      / /|_/ /  / /  / __ \\   / __/\n");
-        printf(" / /  / /  / / / /  / /_/ /  _>  <       / /  / /  / /  / / / /  / /_  \n");
-        printf("/_/  /_/  /_/ /_/   \\__,_/  /_/|_|      /_/  /_/  /_/  /_/ /_/   \\__/  \n");
-        printf("                                                                        \n");
+        printf(CYAN "    __   _                                  __  ___   _             __ \n");
+        printf(CYAN "   / /  (_)  ____     __  __   _  __       /  |/  /  (_)  ____     / /_\n");
+        printf(CYAN "  / /  / /  / __ \\   / / / /  | |/_/      / /|_/ /  / /  / __ \\   / __/\n");
+        printf(CYAN " / /  / /  / / / /  / /_/ /  _>  <       / /  / /  / /  / / / /  / /_  \n");
+        printf(CYAN "/_/  /_/  /_/ /_/   \\__,_/  /_/|_|      /_/  /_/  /_/  /_/ /_/   \\__/  \n");
+        printf(CYAN "                                                                        \n");
     }
 
     else
     {
         // none of this matched then tsukifetch printed
-        printf("   __                      __      _            __       _                      \n");
-        printf("  / /_   _____   __  __   / /__   (_)  _____   / /_     (_)  ____ ___     ____ _\n");
-        printf(" / __/  / ___/  / / / /  / //_/  / /  / ___/  / __ \\   / /  / __ `__ \\   / __ `/\n");
-        printf(" / /_   (__  )  / /_/ /  / ,<    / /  (__  )  / / / /  / /  / / / / / /  / /_/ / \n");
-        printf("\\__/  /____/   \\__,_/  /_/|_|  /_/  /____/  /_/ /_/  /_/  /_/ /_/ /_/   \\__,_/  \n");
+        printf(YELLOW "   __                      __      _            __       _                      \n");
+        printf(YELLOW "  / /_   _____   __  __   / /__   (_)  _____   / /_     (_)  ____ ___     ____ _\n");
+        printf(YELLOW " / __/  / ___/  / / / /  / //_/  / /  / ___/  / __ \\   / /  / __ `__ \\   / __ `/\n");
+        printf(YELLOW " / /_   (__  )  / /_/ /  / ,<    / /  (__  )  / / / /  / /  / / / / / /  / /_/ / \n");
+        printf(YELLOW "\\__/  /____/   \\__,_/  /_/|_|  /_/  /____/  /_/ /_/  /_/  /_/ /_/ /_/   \\__,_/  \n");
     }
 }
 
@@ -149,7 +150,7 @@ int main(int argc, char const *argv[])
     printASCII_Logo(distroName);
 
     // info printing
-    printf(RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n\n" RESET);
+    printf(LIGHT_RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n\n" RESET);
     printf(BOLD_PURPLE " 👤 USER: " WHITE "%s\n" RESET, userName);
     printf(BOLD_PURPLE " 📦 DISTRO: " WHITE "%s" RESET, distroName);
     printf(BOLD_PURPLE " 🌐 HOST: " WHITE "%s\n" RESET, uts.nodename);
