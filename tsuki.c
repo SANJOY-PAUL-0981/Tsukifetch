@@ -1,4 +1,4 @@
-// C Header Files 
+// C Header Files
 #include <sys/utsname.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,6 +18,101 @@
 #define BOLD_PURPLE "\e[1;35m"
 
 // ASCII art print func
+char printASCII_Logo(const char *distro_name)
+{
+
+    if (strncmp(distro_name, "ubuntu", 3) == 0)
+    {
+        // ubuntu ASCII art
+        printf("   __  __   __                         __          \n");
+        printf("  / / / /  / /_     __  __   ____     / /_   __  __\n");
+        printf(" / / / /  / __ \\   / / / /  / __ \\   / __/  / / / /\n");
+        printf("/ /_/ /  / /_/ /  / /_/ /  / / / /  / /_   / /_/ / \n");
+        printf("\\____/  /_.___/   \\__,_/  /_/ /_/   \\__/   \\__,_/  \n");
+    }
+
+    else if (strncmp(distro_name, "pop", 3) == 0)
+    {
+        // pop OS ASCII art
+        printf(GREEN "    ____                 __   ____  _____\n");
+        printf(GREEN "   / __ \\____  ____     / /  / __ \\/ ___/\n");
+        printf(GREEN "  / /_/ / __ \\/ __ \\   / /  / / / /\\__ \\ \n");
+        printf(GREEN " / ____/ /_/ / /_/ /  /_/  / /_/ /___/ / \n");
+        printf(GREEN "/_/    \\____/ .___/  (_)   \\____//____/  \n");
+        printf(GREEN "           /_/                            \n");
+    }
+
+    else if (strncmp(distro_name, "kubuntu", 3) == 0)
+    {
+        // kubuntu ASCII art
+        printf("    __               __                         __          \n");
+        printf("   / /__   __  __   / /_     __  __   ____     / /_   __  __\n");
+        printf("  / //_/  / / / /  / __ \\   / / / /  / __ \\   / __/  / / / /\n");
+        printf(" / ,<    / /_/ /  / /_/ /  / /_/ /  / / / /  / /_   / /_/ / \n");
+        printf("/_/|_|   \\__,_/  /_.___/   \\__,_/  /_/ /_/   \\__/   \\__,_/  \n");
+    }
+
+    else if (strncmp(distro_name, "fedora", 3) == 0)
+    {
+        // fedora ASCII art
+        printf("    ____               __                         \n");
+        printf("   / __/  ___     ____/ /  ____     _____   ____ _\n");
+        printf("  / /_   / _ \\   / __  /  / __ \\   / ___/  / __ `/\n");
+        printf(" / __/  /  __/  / /_/ /  / /_/ /  / /     / /_/ / \n");
+        printf("/_/     \\___/   \\__,_/   \\____/  /_/      \\__,_/  \n");
+    }
+
+    else if (strncmp(distro_name, "debian", 3) == 0)
+    {
+        // debian ASCII art
+        printf("       __           __       _                 \n");
+        printf("  ____/ /  ___     / /_     (_)  ____ _   ____ \n");
+        printf(" / __  /  / _ \\   / __ \\   / /  / __ `/  / __ \\\n");
+        printf("/ /_/ /  /  __/  / /_/ /  / /  / /_/ /  / / / /\n");
+        printf("\\__,_/   \\___/  /_.___/  /_/   \\__,_/  /_/ /_/ \n");
+    }
+
+    else if (strncmp(distro_name, "arch", 3) == 0)
+    {
+        // arch ASCII art
+        printf("     ___                       __ \n");
+        printf("    /   |     _____   _____   / /_\n");
+        printf("   / /| |    / ___/  / ___/  / __ \\\n");
+        printf("  / ___ |   / /     / /__   / / / /\n");
+        printf(" /_/  |_|  /_/      \\___/  /_/ /_/ \n");
+    }
+}
+
+// Read distro name
+char *readDistroName()
+{
+    char *distro;
+    FILE *infoFile;
+    char *line = NULL;
+    size_t n = 0;
+
+    infoFile = fopen("/etc/os-release", "r");
+
+    if (infoFile == NULL)
+    {
+        perror("Error in opening /etc/os-release");
+        return NULL;
+    }
+
+    while (getline(&line, &n, infoFile) != -1)
+    {
+        if (strncmp(line, "ID=", 3) == 0)
+        {
+            distro = line + 3;
+            break;
+        }
+    }
+
+    fclose(infoFile);
+    return distro;
+}
+
+// Read CPU info
 
 int main(int argc, char const *argv[])
 {
@@ -26,25 +121,25 @@ int main(int argc, char const *argv[])
     uname(&uts);
     char *userName = getenv("USER");
     char *shellName = getenv("SHELL");
+    char *distroName = readDistroName();
+    // char *cpuStats = ;
 
     // ASCII art print
+    printASCII_Logo(distroName);
 
     // info printing
-    printf(RED"\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n\n" RESET);
-    printf(BOLD_PURPLE" 👤 USER: " WHITE "%s\n" RESET, userName);
-    printf(BOLD_PURPLE" 📦 DISTRO: ");
-    printf(BOLD_PURPLE"\n 🌐 HOST: " WHITE "%s\n" RESET, uts.nodename);
-    printf(BOLD_PURPLE" 📟 SHELL: " WHITE "%s\n" RESET, shellName);
-    printf(BOLD_PURPLE" 💾 KERNEL: " WHITE "%s\n" RESET, uts.release);
-    printf(BOLD_PURPLE" 🗄️  CPU: \n");
+    printf(RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n\n" RESET);
+    printf(BOLD_PURPLE " 👤 USER: " WHITE "%s\n" RESET, userName);
+    printf(BOLD_PURPLE " 📦 DISTRO: " WHITE "%s" RESET, distroName);
+    printf(BOLD_PURPLE " 🌐 HOST: " WHITE "%s\n" RESET, uts.nodename);
+    printf(BOLD_PURPLE " 📟 SHELL: " WHITE "%s\n" RESET, shellName);
+    printf(BOLD_PURPLE " 💾 KERNEL: " WHITE "%s\n" RESET, uts.release);
+    printf(BOLD_PURPLE " 🗄️  CPU: \n");
     // Desktop Env getenv() lib func
     char *desktop_Enviorment = getenv("XDG_CURRENT_DESKTOP");
-    printf(BOLD_PURPLE" 🏙️  DE/WM: " WHITE "%s\n" RESET, desktop_Enviorment);
+    printf(BOLD_PURPLE " 🏙️  DE/WM: " WHITE "%s\n" RESET, desktop_Enviorment);
 
-    printf(RED"\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
+    printf(RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
     printf(BOLD_RED "> tsukishima - built by tsukixp\n" RESET);
     return 0;
 }
-
-
-
