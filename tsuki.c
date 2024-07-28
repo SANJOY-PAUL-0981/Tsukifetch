@@ -97,19 +97,19 @@ char printASCII_Logo(const char *distro_name)
     else if (strncmp(distro_name, "macos", 3) == 0)
     {
         // macOS ASCII art
-        printf(RED "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀\n");
-        printf(RED "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⡿⠀⠀⠀⠀⠀⠀\n");
-        printf(RED "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀\n");
-        printf(RED "⠀⠀⠀⢀⣠⣤⣤⣤⣀⣀⠈⠋⠉⣁⣠⣤⣤⣤⣀⡀⠀⠀\n");
-        printf(RED "⠀⢠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀\n");
-        printf(RED "⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠀\n");
-        printf(RED "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀\n");
-        printf(RED "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀\n");
-        printf(RED "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀\n");
-        printf(RED "⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀\n");
-        printf(RED "⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁\n");
-        printf(RED "⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀\n");
-        printf(RED "⠀⠀⠀⠈⠙⢿⣿⣿⣿⠿⠟⠛⠻⠿⣿⣿⣿⡿⠋⠀⠀⠀\n");
+        printf(LIGHT_GRAY "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀\n");
+        printf(LIGHT_GRAY "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⡿⠀⠀⠀⠀⠀⠀\n");
+        printf(LIGHT_GRAY "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀\n");
+        printf(LIGHT_GRAY "⠀⠀⠀⢀⣠⣤⣤⣤⣀⣀⠈⠋⠉⣁⣠⣤⣤⣤⣀⡀⠀⠀\n");
+        printf(LIGHT_GRAY "⠀⢠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀\n");
+        printf(LIGHT_GRAY "⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠀\n");
+        printf(LIGHT_GRAY "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀\n");
+        printf(LIGHT_GRAY "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀\n");
+        printf(LIGHT_GRAY "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀\n");
+        printf(LIGHT_GRAY "⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀\n");
+        printf(LIGHT_GRAY "⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁\n");
+        printf(LIGHT_GRAY "⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀\n");
+        printf(LIGHT_GRAY "⠀⠀⠀⠈⠙⢿⣿⣿⣿⠿⠟⠛⠻⠿⣿⣿⣿⡿⠋⠀⠀⠀\n");
     }
 
     else
@@ -153,6 +153,26 @@ char *readDistroName()
 }
 
 // Read CPU info
+char *CPU_info(void){
+    char *cp;
+    FILE *cpuInfo;
+    char *line = NULL;
+    size_t n = 0;
+    cpuInfo = fopen("/proc/cpuinfo","r");
+    if(cpuInfo == NULL){
+        perror("Error opening /proc/cpuinfo");
+        return NULL;
+    }
+    while(getline(&line,&n,cpuInfo) != -1){
+        if(strncmp(line,"model name :",10) == 0){
+            cp = line + 13;
+            break;
+        }
+    }
+
+    fclose(cpuInfo);
+    return cp;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -162,7 +182,7 @@ int main(int argc, char const *argv[])
     char *userName = getenv("USER");
     char *shellName = getenv("SHELL");
     char *distroName = readDistroName();
-    // char *cpuStats = ;
+    char *cpuStats = CPU_info();
 
     // ASCII art print
     printASCII_Logo(distroName);
@@ -174,7 +194,7 @@ int main(int argc, char const *argv[])
     printf(BOLD_PURPLE " 🌐 HOST: " WHITE "%s\n" RESET, uts.nodename);
     printf(BOLD_PURPLE " 📟 SHELL: " WHITE "%s\n" RESET, shellName);
     printf(BOLD_PURPLE " 💾 KERNEL: " WHITE "%s\n" RESET, uts.release);
-    printf(BOLD_PURPLE " 🗄️  CPU: \n");
+    printf(BOLD_PURPLE " 🗄️  CPU: \n" WHITE "%s\n" RESET, cpuStats);
     // Desktop Env getenv() lib func
     char *desktop_Enviorment = getenv("XDG_CURRENT_DESKTOP");
     printf(BOLD_PURPLE " 🏙️  DE/WM: " WHITE "%s\n" RESET, desktop_Enviorment);
