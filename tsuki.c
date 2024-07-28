@@ -153,18 +153,22 @@ char *readDistroName()
 }
 
 // Read CPU info
-char *CPU_info(void){
+char *CPU_info(void)
+{
     char *cp;
     FILE *cpuInfo;
     char *line = NULL;
     size_t n = 0;
-    cpuInfo = fopen("/proc/cpuinfo","r");
-    if(cpuInfo == NULL){
+    cpuInfo = fopen("/proc/cpuinfo", "r");
+    if (cpuInfo == NULL)
+    {
         perror("Error opening /proc/cpuinfo");
         return NULL;
     }
-    while(getline(&line,&n,cpuInfo) != -1){
-        if(strncmp(line,"model name :",10) == 0){
+    while (getline(&line, &n, cpuInfo) != -1)
+    {
+        if (strncmp(line, "model name :", 10) == 0)
+        {
             cp = line + 13;
             break;
         }
@@ -188,18 +192,19 @@ int main(int argc, char const *argv[])
     printASCII_Logo(distroName);
 
     // info printing
-    printf(LIGHT_RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n\n" RESET);
+    printf(CYAN "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n\n" RESET);
     printf(BOLD_PURPLE " 👤 USER: " WHITE "%s\n" RESET, userName);
     printf(BOLD_PURPLE " 📦 DISTRO: " WHITE "%s" RESET, distroName);
     printf(BOLD_PURPLE " 🌐 HOST: " WHITE "%s\n" RESET, uts.nodename);
     printf(BOLD_PURPLE " 📟 SHELL: " WHITE "%s\n" RESET, shellName);
     printf(BOLD_PURPLE " 💾 KERNEL: " WHITE "%s\n" RESET, uts.release);
-    printf(BOLD_PURPLE " 🗄️  CPU: \n" WHITE "%s\n" RESET, cpuStats);
+
     // Desktop Env getenv() lib func
     char *desktop_Enviorment = getenv("XDG_CURRENT_DESKTOP");
     printf(BOLD_PURPLE " 🏙️  DE/WM: " WHITE "%s\n" RESET, desktop_Enviorment);
+    printf(BOLD_PURPLE " 🗄️  CPU: " WHITE "%s" RESET, cpuStats);
 
-    printf(RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
-    printf(BOLD_RED "> tsukishima - built by tsukixp\n" RESET);
+    printf(CYAN "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
+    printf(YELLOW "> tsukishima - built by tsukixp\n" RESET);
     return 0;
 }
