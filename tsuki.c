@@ -192,8 +192,7 @@ int main(int argc, char const *argv[])
     printASCII_Logo(distroName);
 
     // info printing
-    printf(CYAN "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n\n" RESET);
-    printf(BOLD_PURPLE " 👤 USER: " WHITE "%s\n" RESET, userName);
+    printf(BOLD_PURPLE "\n\n 👤 USER: " WHITE "%s\n" RESET, userName);
     printf(BOLD_PURPLE " 📦 DISTRO: " WHITE "%s" RESET, distroName);
     printf(BOLD_PURPLE " 🌐 HOST: " WHITE "%s\n" RESET, uts.nodename);
     printf(BOLD_PURPLE " 📟 SHELL: " WHITE "%s\n" RESET, shellName);
