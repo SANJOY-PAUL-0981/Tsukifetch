@@ -17,7 +17,7 @@
 #define BOLD_PURPLE "\e[1;35m"
 
 // ASCII art print func
-char printASCII_Logo(const char *distro_name)
+void printASCII_Logo(const char *distro_name)
 {
 
     if (strncmp(distro_name, "ubuntu", 3) == 0)

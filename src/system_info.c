@@ -29,7 +29,6 @@ char *readDistroName()
     }
 
     fclose(infoFile);
-    free(line);
     return distro;
 }
 
@@ -56,6 +55,5 @@ char *CPU_info(void)
     }
 
     fclose(cpuInfo);
-    free(line);
     return cp;
 }

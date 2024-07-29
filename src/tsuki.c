@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "printASCII/ascii_art.h"
-#include "system_info/system_info.h"
+#include "ascii_art.h"
+#include "system_info.h"
 
 // ANSI colour codes
 #define RED "\e[0;31m"
