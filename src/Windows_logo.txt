@@ -1,5 +1,0 @@
-    printf(GREEN"         _.-;;-._ \n");
-    printf(GREEN"  '-..-'|   ||   | \n");
-    printf(GREEN"  '-..-'|_.-;;-._| \n");
-    printf(GREEN"  '-..-'|   ||   | \n");
-    printf(GREEN"  '-..-'|_.-''-._| \n");
