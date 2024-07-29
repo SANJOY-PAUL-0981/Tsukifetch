@@ -18,6 +18,9 @@ It is build in C language. I hope you guys will like it. If you faced any kind o
   git clone https://github.com/SANJOY-PAUL-0981/Tsukifetch.git
 ```
 ```bash
+  cd Tsukifetch
+```
+```bash
   sudo mv tsukifetch /usr/local/bin/
 ```
 ```bash
