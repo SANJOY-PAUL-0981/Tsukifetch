@@ -1,8 +1,6 @@
-// C Header Files
-#include <sys/utsname.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include "ascii_art.h"
 
 // ANSI colour codes
 #define RED "\e[0;31m"
@@ -121,89 +119,4 @@ char printASCII_Logo(const char *distro_name)
         printf(YELLOW " / /_   (__  )  / /_/ /  / ,<    / /  (__  )  / / / /  / /  / / / / / /  / /_/ / \n");
         printf(YELLOW "\\__/  /____/   \\__,_/  /_/|_|  /_/  /____/  /_/ /_/  /_/  /_/ /_/ /_/   \\__,_/  \n");
     }
-}
-
-// Read distro name
-char *readDistroName()
-{
-    char *distro;
-    FILE *infoFile;
-    char *line = NULL;
-    size_t n = 0;
-
-    infoFile = fopen("/etc/os-release", "r");
-
-    if (infoFile == NULL)
-    {
-        perror("Error in opening /etc/os-release");
-        return NULL;
-    }
-
-    while (getline(&line, &n, infoFile) != -1)
-    {
-        if (strncmp(line, "ID=", 3) == 0)
-        {
-            distro = line + 3;
-            break;
-        }
-    }
-
-    fclose(infoFile);
-    return distro;
-}
-
-// Read CPU info
-char *CPU_info(void)
-{
-    char *cp;
-    FILE *cpuInfo;
-    char *line = NULL;
-    size_t n = 0;
-    cpuInfo = fopen("/proc/cpuinfo", "r");
-    if (cpuInfo == NULL)
-    {
-        perror("Error opening /proc/cpuinfo");
-        return NULL;
-    }
-    while (getline(&line, &n, cpuInfo) != -1)
-    {
-        if (strncmp(line, "model name :", 10) == 0)
-        {
-            cp = line + 13;
-            break;
-        }
-    }
-
-    fclose(cpuInfo);
-    return cp;
-}
-
-int main(int argc, char const *argv[])
-{
-    // uname struct declaration
-    struct utsname uts;
-    uname(&uts);
-    char *userName = getenv("USER");
-    char *shellName = getenv("SHELL");
-    char *distroName = readDistroName();
-    char *cpuStats = CPU_info();
-
-    // ASCII art print
-    printASCII_Logo(distroName);
-
-    // info printing
-    printf(BOLD_PURPLE "\n\n 👤 USER: " WHITE "%s\n" RESET, userName);
-    printf(BOLD_PURPLE " 📦 DISTRO: " WHITE "%s" RESET, distroName);
-    printf(BOLD_PURPLE " 🌐 HOST: " WHITE "%s\n" RESET, uts.nodename);
-    printf(BOLD_PURPLE " 📟 SHELL: " WHITE "%s\n" RESET, shellName);
-    printf(BOLD_PURPLE " 💾 KERNEL: " WHITE "%s\n" RESET, uts.release);
-
-    // Desktop Env getenv() lib func
-    char *desktop_Enviorment = getenv("XDG_CURRENT_DESKTOP");
-    printf(BOLD_PURPLE " 🏙️  DE/WM: " WHITE "%s\n" RESET, desktop_Enviorment);
-    printf(BOLD_PURPLE " 🗄️  CPU: " WHITE "%s" RESET, cpuStats);
-
-    printf(CYAN "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
-    printf(YELLOW "> tsukishima - built by tsukixp\n" RESET);
-    return 0;
 }
