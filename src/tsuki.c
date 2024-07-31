@@ -136,6 +136,6 @@ int main() {
 
     // Footer
     printf(CYAN "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
-    printf(YELLOW "> tsukishima - built by tsukishima\n" RESET);
+    printf(YELLOW "> tsukishima - built by tsukixp\n" RESET);
     return 0;
 }
