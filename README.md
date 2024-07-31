@@ -26,6 +26,9 @@ It is build in C language. I hope you guys will like it. If you faced any kind o
 ```bash
   sudo chmod +x /usr/local/bin/tsukifetch
 ```
+## Customization
+If you want to customize the OS logo with any ASCII image then paste your image at: *src/logo/(your_OS.txt)* 
+
 ## Run
 To run this paste this in your terminal.
 ```bash
