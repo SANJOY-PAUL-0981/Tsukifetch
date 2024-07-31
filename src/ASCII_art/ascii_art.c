@@ -45,7 +45,7 @@ void printASCII_Logo(const char *distro_name)
     case 'u':
         if (strncmp(distro_name, "ubuntu", 6) == 0)
         {
-            strcpy(filename, "logo/ubuntu.txt");
+            strcpy(filename, "src/ASCII_art/logo/ubuntu.txt");
             logoFile(filename, ORANGE);
         }
         break;
@@ -54,7 +54,7 @@ void printASCII_Logo(const char *distro_name)
         if (strncmp(distro_name, "pop", 3) == 0)
         {
             //printf("pop"); (use for debugging)
-            strcpy(filename, "logo/pop.txt");
+            strcpy(filename, "src/ASCII_art/logo/pop.txt");
             logoFile(filename, GREEN);
         }
         break;
@@ -62,7 +62,7 @@ void printASCII_Logo(const char *distro_name)
     case 'm':
         if (strncmp(distro_name, "mac", 3) == 0)
         {
-            strcpy(filename, "logo/mac.txt");
+            strcpy(filename, "src/ASCII_art/logo/mac.txt");
             logoFile(filename, LIGHT_GRAY);
         }
         break;
@@ -70,7 +70,7 @@ void printASCII_Logo(const char *distro_name)
     case 'l':
         if (strncmp(distro_name, "linuxmint", 5) == 0)
         {
-            strcpy(filename, "logo/linux_mint.txt");
+            strcpy(filename, "src/ASCII_art/logo/linux_mint.txt");
             logoFile(filename, CYAN);
         }
         break;
@@ -78,7 +78,7 @@ void printASCII_Logo(const char *distro_name)
     case 'k':
         if (strncmp(distro_name, "kubuntu", 7) == 0)
         {
-            strcpy(filename, "logo/kubuntu.txt");
+            strcpy(filename, "src/ASCII_art/logo/kubuntu.txt");
             logoFile(filename, BLUE);
         }
         break;
@@ -86,7 +86,7 @@ void printASCII_Logo(const char *distro_name)
     case 'f':
         if (strncmp(distro_name, "fedora", 5) == 0)
         {
-            strcpy(filename, "logo/fedora.txt");
+            strcpy(filename, "src/ASCII_art/logo/fedora.txt");
             logoFile(filename, PURPLE);
         }
         break;
@@ -94,21 +94,21 @@ void printASCII_Logo(const char *distro_name)
     case 'd':
         if (strncmp(distro_name, "debian", 5) == 0)
         {
-            strcpy(filename, "logo/debian.txt");
+            strcpy(filename, "src/ASCII_art/logo/debian.txt");
             logoFile(filename, RED);
         }
         break;
 
     case 'a':
-        if (strncmp(distro_name, "logo/arch.txt", 4) == 0)
+        if (strncmp(distro_name, "arch", 4) == 0)
         {
-            strcpy(filename, "logo/arch.txt");
+            strcpy(filename, "src/ASCII_art/logo/arch.txt");
             logoFile(filename, PURPLE);
         }
         break;
             
     default:
-        strcpy(filename, "logo/nothing.txt");
+        strcpy(filename, "src/ASCII_art/logo/nothing.txt");
         logoFile(filename, YELLOW);
         break;
     }
