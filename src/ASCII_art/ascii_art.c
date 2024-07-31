@@ -45,7 +45,7 @@ void printASCII_Logo(const char *distro_name)
     case 'u':
         if (strncmp(distro_name, "ubuntu", 6) == 0)
         {
-            strcpy(filename, "usr/local/bin/tsukifetch/src/ASCII_art/logo/ubuntu.txt");
+            strcpy(filename, "src/ASCII_art/logo/ubuntu.txt");
             logoFile(filename, ORANGE);
         }
         break;
@@ -54,7 +54,7 @@ void printASCII_Logo(const char *distro_name)
         if (strncmp(distro_name, "pop", 3) == 0)
         {
             //printf("pop"); //(use for debugging)
-            strcpy(filename, "usr/local/bin/tsukifetch/src/ASCII_art/logo/pop.txt");
+            strcpy(filename, "src/ASCII_art/logo/pop.txt");
             logoFile(filename, GREEN);
         }
         break;
