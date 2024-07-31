@@ -15,6 +15,8 @@
 #define PURPLE "\e[0;35m"
 #define BOLD_RED "\e[1;31m"
 #define BOLD_PURPLE "\e[1;35m"
+#define ORANGE "\033[38;5;202m"
+#define PINK "\033[38;5;206m"
 
 // ASCII art print func
 void printASCII_Logo(const char *distro_name)
