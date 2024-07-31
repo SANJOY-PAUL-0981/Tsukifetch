@@ -53,8 +53,8 @@ void printASCII_Logo(const char *distro_name)
     case 'p':
         if (strncmp(distro_name, "pop", 3) == 0)
         {
-            //printf("pop"); (use for debugging)
-            strcpy(filename, "src/ASCII_art/logo/pop.txt");
+            //printf("pop"); //(use for debugging)
+            strcpy(filename, "usr/local/bin/tsukifetch/src/ASCII_art/logo/pop.txt");
             logoFile(filename, GREEN);
         }
         break;
