@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/utsname.h>
+#include <sys/sysinfo.h>
 #include "sys_info/system_info.h"
 #include "ASCII_art/ascii_art.h"
 
@@ -29,13 +30,21 @@ int main(int argc, char const *argv[])
 {
     // uname struct declaration
     struct utsname uts;
+    struct sysinfo sys_info;
     uname(&uts);
     char *userName = getenv("USER");
     char *shellName = getenv("SHELL");
     char *distroName = readDistroName();
     char *cpuStats = CPU_info();
 
+    // Check sysinfo call
+    if (sysinfo(&sys_info) != 0) {
+        perror("sysinfo");
+        return -1;
+    }
+
     // ASCII art print
+    printf("\n");
     printASCII_Logo(distroName);
 
     // info printing
@@ -49,6 +58,7 @@ int main(int argc, char const *argv[])
     char *desktop_Enviorment = getenv("XDG_CURRENT_DESKTOP");
     printf(BOLD_PURPLE " 🏙️  DE/WM: " WHITE "%s\n" RESET, desktop_Enviorment);
     printf(BOLD_PURPLE " 🗄️  CPU: " WHITE "%s" RESET, cpuStats);
+    printf(BOLD_PURPLE " 🗂  RAM: " WHITE "%ld/%ld" RESET, sys_info.freeram / 1024 / 1024, sys_info.totalram / 1024 / 1024);
 
     printf(RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
     printf(YELLOW "> tsukishima - built by tsukixp\n" RESET);
