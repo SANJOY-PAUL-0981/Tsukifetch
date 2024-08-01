@@ -22,6 +22,8 @@
 #define ORANGE "\033[38;5;202m"
 #define PINK "\033[38;5;206m"
 
+//Absolute Path
+#define LOGO_PATH "/usr/local/share/tsukifetch/logos/"
 
 int main(int argc, char const *argv[])
 {

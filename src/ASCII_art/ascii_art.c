@@ -18,6 +18,9 @@
 #define ORANGE "\033[38;5;202m"
 #define PINK "\033[38;5;206m"
 
+//Absolute Path
+#define LOGO_PATH "/usr/local/share/tsukifetch/logos/"
+
 // File Scan
 void logoFile(const char *filename, const char *color_code) {
     FILE *file = fopen(filename, "r");
@@ -45,7 +48,7 @@ void printASCII_Logo(const char *distro_name)
     case 'u':
         if (strncmp(distro_name, "ubuntu", 6) == 0)
         {
-            strcpy(filename, "src/logo/ubuntu.txt");
+            strcpy(filename, LOGO_PATH "ubuntu.txt");
             logoFile(filename, ORANGE);
         }
         break;
@@ -54,7 +57,7 @@ void printASCII_Logo(const char *distro_name)
         if (strncmp(distro_name, "pop", 3) == 0)
         {
             //printf("pop"); //(use for debugging)
-            strcpy(filename, "src/logo/pop.txt");
+            strcpy(filename, LOGO_PATH "pop.txt");
             logoFile(filename, GREEN);
         }
         break;
@@ -62,7 +65,7 @@ void printASCII_Logo(const char *distro_name)
     case 'm':
         if (strncmp(distro_name, "mac", 3) == 0)
         {
-            strcpy(filename, "src/logo/mac.txt");
+            strcpy(filename, LOGO_PATH "mac.txt");
             logoFile(filename, LIGHT_GRAY);
         }
         break;
@@ -70,7 +73,7 @@ void printASCII_Logo(const char *distro_name)
     case 'l':
         if (strncmp(distro_name, "linuxmint", 5) == 0)
         {
-            strcpy(filename, "src/logo/linux_mint.txt");
+            strcpy(filename, LOGO_PATH "linux_mint.txt");
             logoFile(filename, CYAN);
         }
         break;
@@ -78,7 +81,7 @@ void printASCII_Logo(const char *distro_name)
     case 'k':
         if (strncmp(distro_name, "kubuntu", 7) == 0)
         {
-            strcpy(filename, "src/logo/kubuntu.txt");
+            strcpy(filename, LOGO_PATH "kubuntu.txt");
             logoFile(filename, BLUE);
         }
         break;
@@ -86,7 +89,7 @@ void printASCII_Logo(const char *distro_name)
     case 'f':
         if (strncmp(distro_name, "fedora", 5) == 0)
         {
-            strcpy(filename, "src/logo/fedora.txt");
+            strcpy(filename, LOGO_PATH "fedora.txt");
             logoFile(filename, PURPLE);
         }
         break;
@@ -94,7 +97,7 @@ void printASCII_Logo(const char *distro_name)
     case 'd':
         if (strncmp(distro_name, "debian", 5) == 0)
         {
-            strcpy(filename, "src/logo/debian.txt");
+            strcpy(filename, LOGO_PATH "debian.txt");
             logoFile(filename, RED);
         }
         break;
@@ -102,13 +105,13 @@ void printASCII_Logo(const char *distro_name)
     case 'a':
         if (strncmp(distro_name, "arch", 4) == 0)
         {
-            strcpy(filename, "src/logo/arch.txt");
+            strcpy(filename, LOGO_PATH "arch.txt");
             logoFile(filename, PURPLE);
         }
         break;
             
     default:
-        strcpy(filename, "src/logo/nothing.txt");
+        strcpy(filename, LOGO_PATH "nothing.txt");
         logoFile(filename, YELLOW);
         break;
     }
