@@ -25,6 +25,26 @@ It is build in C language. I hope you guys will like it. If you faced any kind o
   chmod +x installer.sh
   sudo ./installer.sh
 ```
+
+## Update
+- To update your version according to this repo you need to do:
+```bash
+  cd Tsukifetch
+```
+```bash
+  git fetch
+```
+```bash
+  git merge origin/main
+```
+```bash
+  git pull
+```
+*Then Run this script again:*
+```bash
+  chmod +x installer.sh
+  sudo ./installer.sh
+```
 ## Customization
 If you want to customize the OS logo with any ASCII image then paste your image at: **src/logo/(your_OS.txt)** 
 Do not change the file name and after updating run this script again,
