@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
     }
 
     // ASCII art print
-    printf("\n");
+    printf("\n\n");
     printASCII_Logo(distroName);
 
     // info printing
