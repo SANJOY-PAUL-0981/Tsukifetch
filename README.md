@@ -20,15 +20,18 @@ It is build in C language. I hope you guys will like it. If you faced any kind o
 ```bash
   cd Tsukifetch
 ```
+*Then Run this script:*
 ```bash
-  sudo mv tsukifetch /usr/local/bin/
-```
-```bash
-  sudo chmod +x /usr/local/bin/tsukifetch
+  chmod +x installer.sh
+  sudo ./installer.sh
 ```
 ## Customization
 If you want to customize the OS logo with any ASCII image then paste your image at: **src/logo/(your_OS.txt)** 
-
+Do not change the file name and after updating run this script again,
+```bash
+  chmod +x installer.sh
+  sudo ./installer.sh
+```
 ## Run
 To run this paste this in your terminal.
 ```bash
