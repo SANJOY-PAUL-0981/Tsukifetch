@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
     printf(BOLD_PURPLE " 🗄️  CPU: " WHITE "%s" RESET, cpuStats);
     printf(BOLD_PURPLE " 🗂  RAM: " WHITE "%ld/%ld" RESET, sys_info.freeram / 1024 / 1024, sys_info.totalram / 1024 / 1024);
 
-    printf(RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
+    printf(RED "\n🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬🭸🭸🭸🭬\n" RESET);
     printf(YELLOW "> tsukishima - built by tsukixp\n" RESET);
     return 0;
 }
